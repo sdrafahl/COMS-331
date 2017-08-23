@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 %	options include 12pt or 11pt or 10pt
 %	classes include article, report, book, letter, thesis
+\usepackage{amsmath}
 
 \title{HW0}
 \author{Shane Drafahl}
@@ -9,6 +10,28 @@
 \begin{document}
 \maketitle
 
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{
+ This is an inline equation $x + y = 3$  \\
+ This is a displayed equation: \\
+ \large \centerline{ $ x + \dfrac{y}{z - \sqrt{3}} = 2 $} \\
+ This is how you define a piece-wise linear function: \\
+ $$
+f(x) = \left\{
+        \begin{array}{ll}
+        3x + 2 & $if x $<$ 0$ \\
+        7x + 2 & $if x $ \geq $ 0 and x $<$ 10$ \\
+        5x + 22 & $otherwise.$ \\
+        \end{array}
+    \right.
+$$ \\
+This is a matrix: \\
+
+    \fbox{
+        9 | 9 | 9 | 9
+        \fline
+    }
+
+}}%
 
 
 \end{document}

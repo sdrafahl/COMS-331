@@ -1,0 +1,68 @@
+\documentclass{article}
+
+\title { Symbolic state space generation for \\
+         finite models with unknown bounds
+}
+\author{ Gianfranco Ciardo ~~~~ Robert Marmorstein ~~~~ Radu Siminiceanu\\[2ex]
+         College of William and Mary,
+         Williamsburg, Virginia 23187  \\
+         {\rm \{ciardo,rmmarm,radu\}@cs.wm.edu} }
+
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In previous work, we proposed a ``saturation'' algorithm
+for symbolic state-space generation based on
+multi-valued decision diagrams and boolean Kronecker operators.
+This approach greatly outperforms traditional BDD-based techniques but, 
+like them, assumes a priori knowledge of the state space of each submodel.
+In this work, we introduce a new algorithm that merges explicit
+local state-space discovery with symbolic global state-space generation.
+This relieves the modeler from worrying about the behavior of submodels
+in isolation.
+\end{abstract}
+
+\section{Introduction}\label{SEC:introduction}
+
+Since the introduction of implicit methods in verification and symbolic
+model checking, decision diagram, in particular
+BDDs \cite{Bryant1986,Bryant1992,Burch1992}, have had enormous success. 
+However, the systems targeted have been mainly VLSI and
+protocols, where the possible values of the state variable is easily
+determined a priori.
+When attempting to use these same techniques to verify arbitrary
+systems modeled in a high-level specification language such as
+Petri nets or pseudocode, determining the range of the state variables is 
+much more difficult.
+Traditionally, the user has had to deal with this difficulty.
+In NuSMV \cite{Cimatti1999NuSMV}, the domain for multi-valued variables
+must be given explicitly as a set or integer range.
+In our own work, the input (a Petri net) must be
+partitioned so that the state space of
+each resulting subnet can be generated in isolation;
+in practice, the modeler is forced to carefully add
+inhibitor arcs or other constraints to the net to realize this property.
+Putting this burden in the user is limiting and possibly error-prone.
+
+We tackle this problem with an algorithm that, with minimal overhead,
+merges explicit exploration of the local state space of each submodel with
+symbolic exploration of the global state space to produce a 
+multi-valued decision diagram (MDD) \cite{Kam1998} representation of the 
+final state-space, together with the exact representation of the local 
+sub-spaces.  The algorithm is based on our efficient saturation algorithm
+\cite{GFC-Saturation-2001}, which uses an MDD to store the states and 
+boolean Kronecker matrices to encode the transition relation.
+By breaking the traditionally monolithic transition function into 
+event-based functions, exploiting \emph{event locality} 
+\cite{GFC-MDD-improv-2000}, and performing \emph{in-place updates} of MDD 
+nodes, the saturation algorithm showed massive time and space improvements 
+over previously-known approaches. Our new algorithm also employs these 
+ideas and is more general, as it can be applied to models where the 
+traditional algorithm would fail.
+
+\bibliographystyle{abbrv}
+\bibliography{BibtexExample}
+
+\end{document}

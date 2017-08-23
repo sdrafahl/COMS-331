@@ -1,0 +1,254 @@
+\documentclass[11pt]{article}
+\usepackage{epsf}
+\usepackage{amssymb}
+
+
+\title{---}
+\author{---}
+
+\setlength{\oddsidemargin}{-0.5in}
+\setlength{\topmargin}{-0.6in}
+\setlength{\headheight}{0cm}
+\setlength{\headsep}{0cm}
+\setlength{\textheight}{10.3in}
+\setlength{\textwidth}{7.5in}
+\setlength{\topskip}{0cm}
+\setlength{\parskip}{4mm}
+\setlength{\parindent}{0cm}
+\renewcommand{\baselinestretch}{1.15}
+\renewcommand{\arraystretch}{1.15}
+\renewcommand{\dbltopfraction}{0.9}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.9}
+\renewcommand{\dblfloatpagefraction}{0.99}
+\renewcommand{\floatpagefraction}{0.99}
+\renewcommand{\textfraction}{0.01}
+
+
+% numeric sets
+
+\newcommand{\Reals}{\mathbb{R}}      % real numbers
+\newcommand{\Naturals}{\mathbb{N}}   % natural numbers
+\newcommand{\Integers}{\mathbb{Z}}   % integer numbers
+\newcommand{\Rationals}{\mathbb{Q}}  % rational numbers
+\newcommand{\Complexes}{\mathbb{C}}  % complex numbers
+
+% math symbols
+
+\newcommand{\IFF}{\mbox{$\Longleftrightarrow$}}    % biimplication
+\newcommand{\THEN}{\mbox{$\Rightarrow$}}           % implication
+
+\pagestyle{empty}
+
+\begin{document}
+
+%\maketitle
+
+\begin{center}
+{\Large \bf A partial list of mathematical symbols and how to read them}
+\end{center}
+
+\begin{tabular}{|l l l|l l l|l l l|l l l|l l l|}
+\multicolumn{8}{l}{\bf Greek alphabet}
+\\ \hline
+A          & $\alpha$                  & alpha     &
+B          & $\beta$                   & beta      &
+$\Gamma$   & $\gamma$                  & gamma     &
+$\Delta$   & $\delta$                  & delta     &
+E          & $\epsilon$, $\varepsilon$ & epsilon   \\ \hline
+Z          & $\zeta$                   & zeta      &
+H          & $\eta$                    & eta       &
+$\Theta$   & $\theta$, $\vartheta$     & theta     &
+I          & $\iota$                   & iota      &
+K          & $\kappa$                  & kappa     \\ \hline
+$\Lambda$  & $\lambda$                 & lambda    &
+M          & $\mu$                     & mu        &
+N          & $\nu$                     & nu        &
+$\Xi$      & $\xi$                     & xi        &
+O          & $o$                       & omicron   \\ \hline
+$\Pi$      & $\pi$,$\varpi$            & pi        &
+P          & $\rho$, $\varrho$         & rho       &
+$\Sigma$   & $\sigma$, $\varsigma$     & sigma     &
+T          & $\tau$                    & tau       &
+$\Upsilon$ & $\upsilon$                & upsilon   \\ \hline
+$\Phi$     & $\phi$, $\varphi$         & phi       &
+X          & $\chi$                    & chi       &
+$\Psi$     & $\psi$                    & psi       &
+$\Omega$   & $\omega$                  & omega     & & & \\ \hline
+\end{tabular}
+
+\begin{tabular}{|cll|}
+\multicolumn{3}{l}{\bf Important sets}
+\\ \hline
+$\emptyset$ & empty set &
+\\ \hline
+$\Naturals$ & natural numbers & $\{0,1,2,\ldots\}$
+\\ \hline
+$\Naturals^+$ & positive integer numbers & $\{1,2,\ldots\}$
+\\ \hline
+$\Integers$ & integer numbers & $\{\ldots, -2,-1,0,1,2,\ldots\}$
+\\ \hline
+$\Rationals$ & rational numbers & $\left\{m/n : m \in \Integers,
+n \in \Naturals^+ \right \}$
+\\ \hline
+$\Reals$ & real numbers & $(-\infty, +\infty)$
+\\ \hline
+$\Reals^+$ & positive real numbers & $(0, +\infty)$
+\\ \hline
+$\Complexes$ & complex numbers & $\{x+iy : x,y \in \Reals\}$
+ ~~~~~~~~($i$ is the imaginary unit, $i^2=-1$)
+\\ \hline
+\end{tabular}\\
+
+\begin{tabular}{|cll|}
+\multicolumn{3}{l}{\bf Logical operators}
+\\ \hline
+$\forall$ & for all, universal quantifier & $\forall n\in\Naturals, n\geq 0$
+\\ \hline
+$\exists$ & exists, there is, existential quantifier &
+   $\exists n\in\Naturals, n\geq 7$
+\\ \hline
+$\exists!$ & there is exactly one & $\exists! n\in\Naturals, n < 1$
+\\ \hline
+$\wedge$ & and & $(3>2) \wedge (2>1)$
+\\ \hline
+       & \ldots over an index set & $\bigwedge_{i\in \Naturals}
+                B_i = B_0 \wedge B_1 \wedge B_2 \wedge \cdots$
+\\ \hline
+$\vee$ & or & $(2>3) \vee (2>1)$
+\\ \hline
+       & \ldots over an index set & $\bigvee_{i\in \Naturals}
+                B_i = B_0 \vee B_1 \vee B_2 \vee \cdots$
+\\ \hline
+$\THEN$ & implication, if-then & $\forall a,b \in \Reals,
+   (a = b) ~\THEN~ (a \geq b)$
+\\ \hline
+$\IFF$ & biimplication, if-and-only-if & $\forall a,b \in \Reals,
+   (a = b) ~\IFF~ (b = a)$
+\\ \hline
+$\neg$ & negation, not & $\neg ( 2 > 3)$
+\\ \hline
+       & alternative notations for negation
+       & $\overline{(2 > 3)}$, $2 \not> 3$
+\\ \hline
+\end{tabular}
+
+\begin{tabular}{|cll|}
+\multicolumn{3}{l}{\bf Arithmetic operators}
+\\ \hline
+$|~|$ & absolute value & $| -7 | = |7| = 7$
+\\ \hline
+$\sum$ & summation& $\sum_{i \in \Naturals^+} 2^{-i} = 1$
+\\ \hline
+$\prod$ & product & $\prod_{i=1}^n i = n!$
+\\ \hline
+$!$ & factorial & $7! = 1\cdot 2\cdot 3\cdot 4\cdot 5\cdot 6\cdot 7 = 5040$
+\\ \hline
+$\left( \begin{array}{c} n\\m\end{array} \right )$ &
+   $n$ choose $m$, combinatorial number &  $\left( \begin{array}{c}
+    n\\m\end{array} \right ) = \displaystyle \frac{n!}{(n-m)! m!}$
+\\ \hline
+mod & modulo, remainder & 7 mod 3 = 1, -8 mod 5 = 2
+\\ \hline
+div & integer quotient & 7 div 3 = 2, -8 div 5 = -2
+\\ \hline
+\end{tabular}
+
+\begin{tabular}{|cll|}
+\multicolumn{3}{l}{\bf Set operators}
+\\ \hline
+$\in$ & in, membership & $a \in \{a,b,c\}$
+\\ \hline
+$\cup$ & union & $\{a,b,c\} \cup \{a,d\} = \{a,b,c,d\}$
+\\ \hline
+       & \ldots over an index set & $\bigcup_{i\in \Naturals}
+                S_i = S_0 \cup S_1 \cup S_2 \cup \cdots$
+\\ \hline
+$\cap$ & intersection & $\{a,b,c\} \cap \{a,d\} = \{a\}$
+\\ \hline
+       & \ldots over an index set & $\bigcap_{i\in \Naturals}
+                S_i = S_0 \cap S_1 \cap S_2 \cap \cdots$
+\\ \hline
+$\setminus$ & difference & $\{a,b,c\} \setminus \{a,d\} = \{b,c\}$
+\\ \hline
+$\supset$ & strict superset & $\Integers \supset \Naturals$
+\\ \hline
+$\supseteq$ & superset & $\Naturals \supseteq \Naturals$
+\\ \hline
+$\subset$ & strict subset & $\Naturals \subset \Integers$
+\\ \hline
+$\subseteq$ & subset & $\Naturals \subseteq \Naturals$
+\\ \hline
+$2^A$ & power set of $A$ & if $A = \{a,b,c\}$, then $2^A = \{ \emptyset,
+   \{a\}, \{b\}, \{c\}, \{a,b\}, \{a,c\}, \{b,c\}, A \}$
+\\ \hline
+\end{tabular}
+
+\begin{tabular}{|cll|}
+\multicolumn{3}{l}{\bf String, grammar, and formal language notation}
+\\ \hline
+$\lambda$ & empty string (at times, $\epsilon$ is used instead of $\lambda$)
+    & $\lambda a = a$
+\\ \hline
+$^*$ &Kleene star, zero or more occurrences& $a^* = \{\epsilon, a, aa, aaa,
+\ldots\}$
+\\ \hline
+$^+$ & one or more occurrences & $a^+ = \{a, aa, aaa, \ldots\}$
+\\ \hline
+$|~|$ & string length & $|abc| = 3$, $|a^n| = n$, $|\epsilon| = 0$
+\\ \hline
+$A \rightarrow x$ & $A$ goes to $x$ (grammar production) &
+\\ \hline
+$A \Longrightarrow x$ & $A$ derives $x$ &
+\\ \hline
+$A \stackrel{*}{\Longrightarrow} x$ & $A$ derives $x$ in some number of steps &
+\\ \hline
+$A \renewcommand{\arraystretch}{0.4} \begin{array}{c}
+   {~}\\{\Longrightarrow}\\{\scriptstyle G}\end{array} x$
+               & $A$ derives $x$ according to $G$ &
+\\ \hline
+$A \renewcommand{\arraystretch}{0.4} \begin{array}{c}
+   {\scriptstyle *}\\{\Longrightarrow}\\{\scriptstyle G}\end{array} x$
+               & $A$ derives $x$ according to $G$ in some number of steps &
+\\ \hline
+$(q,aa) \vdash (p,a)$ &
+   $(q,aa)$ yields $(p,a)$ in one step &
+\\ \hline
+$(q,aa) \stackrel{*}{\vdash} (p,a)$ &
+   $(q,aa)$ yields $(p,a)$ in some number of steps &
+\\ \hline
+$(q,aa) \renewcommand{\arraystretch}{0.4} \begin{array}{c}
+   {~}\\{\vdash}\\{\scriptstyle M}\end{array} (p,a)$ &
+   $(q,aa)$ yields $(p,a)$ in one step according to $M$ &
+\\ \hline
+$(q,aa) \renewcommand{\arraystretch}{0.4} \begin{array}{c}
+   {*}\\{\vdash}\\{\scriptstyle M}\end{array} (p,a)$ &
+   $(q,aa)$ yields $(p,a)$ in some number of steps according to $M$ &
+\\ \hline
+$M \searrow w$  & the Turing machine $M$ halts on string $w$ &
+\\ \hline
+$M \nearrow w$  & the Turing machine does not $M$ halt on string $w$ &
+\\ \hline
+\end{tabular}
+
+\begin{tabular}{|l|}
+\multicolumn{1}{l}{\bf And remember...}
+\\ \hline
+$0! = 1$
+\\ \hline
+$\forall n \in \Integers, \forall m \in \Naturals, m > 0 ~\THEN~ n =
+  (n ~{\rm div}~ m)m + (n ~{\rm mod}~ m)$
+\\ \hline
+$\bigcup_{i \in \emptyset} S_i = \emptyset$
+\\ \hline
+$\sum_{i \in \emptyset} n_i = 0$
+\\ \hline
+$\prod_{i \in \emptyset} n_i = 1$
+\\ \hline
+\end{tabular}
+
+\vfill
+
+\LaTeX source available at
+\verb+http://web.cs.iastate.edu/~ciardo/Notation.tex+
+\end{document}
