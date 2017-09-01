@@ -5,7 +5,9 @@
     \title{HW1}
     \author{Shane Drafahl}
     \date{29 August,2017}
-    
+    \usepackage{graphicx}
+    \usepackage{epstopdf}
+
     \begin{document}
     \maketitle
 
@@ -56,61 +58,19 @@
     5. Define a DFA, simplified to the best of your abilities, for the language of all strings of a’s,
     b’s, and c’s where a is never immediately followed by b.
 
-    $ \newline $
-
-    Q = $\{\ s_{0}, s_{1}, s_{2}, s_{3}  \}\ $
-    
-    $ \sum $ = $ \{\ a, b, c \}\ $
-
-    $ \delta $ = 
-
-    \begin{center}
-        \begin{tabular}{||c c c c||} 
-        \hline
-        Current & a & b & c \\ [0.5ex] 
-        \hline\hline
-        $ s_{0} $ & $ s_{0} $ & $ s_{2} $ & $ s_{1} $ \\ 
-        \hline
-        $ s_{1} $ & $ s_{0} $ & $ s_{2} $ & $ s_{1} $ \\
-        \hline
-        $ s_{2} $ & $ s_{3} $ & $ s_{2} $ & $ s_{1} $ \\
-        \hline
-        $ s_{3} $ & $ s_{3} $ & $ s_{3} $ & $ s_{3} $ \\
-        \hline
-       \end{tabular}
-       \end{center}
-    
-    M = $ \{\ Q, \sum, \delta, s_{0}, Q \}\ $
+    \begin{figure}[!htb]
+        \centering
+        \includegraphics[scale=.7]{hw1_1.eps}
+    \end{figure}
 
     $ \newline $
 
     6. Define a DFA, simplified to the best of your abilities, that recognizes the language
 
-    L = $ \{\ w \in \{\ a, b \}^{*}\ : |w|_{a} $ mod 3 = 0 $ \}\ $
-
-    $ \newline $
-
-    Q = $\{\ s_{0}, s_{1}, s_{2} \}\ $
-    
-    $ \sum $ = $ \{\ a, b \}\ $
-
-    $ \delta $ = 
-
-    \begin{center}
-        \begin{tabular}{||c c c||} 
-        \hline
-        Current & a & b \\ [0.5ex] 
-        \hline\hline
-        $ s_{0} $ & $ s_{0} $ & $ s_{0} $  \\ 
-        \hline
-        $ s_{1} $ & $ s_{1} $ & $ s_{1} $  \\
-        \hline
-        $ s_{2} $ & $ s_{2} $ & $ s_{2} $  \\
-        \hline
-       \end{tabular}
-       \end{center}
-
-    M = $ \{\ Q, \sum, \delta, s_{0}, \{\ s_{0} \}\ \}\ $
+    \begin{figure}[!htb]
+        \centering
+        \includegraphics[scale=.7]{hw1_2.eps}
+    \end{figure}
 
 
 
