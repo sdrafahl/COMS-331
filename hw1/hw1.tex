@@ -16,7 +16,7 @@
     $ \newline \newline $
     $ \sum $ = $ \{\ a, b, c \}\ $
     $ \newline \newline $
-    $ (b + c)^{*} (c + cb + ac)^{*} $
+    $ ((a + c)^{*}(c^{+}b^{*})^{*}(a + c)^{*})^{*} $ + $ ((a^{*}c^{+})^{*}(b^{*})^{*}((a^{*}c^{+})^{*})^{*} $
     
     $ \newline $
 
@@ -37,7 +37,7 @@
     $ \newline $
     
     This regular expression is equal to $(a^{*}b^{*}c^{*})^{*} (a^{*} b^{*})^{*} $ and be reduced to
-    $ (a^{*}b^{*}c^{*})^{*} $. In english it essentialy means that the language created from it
+    $ (a + b + c)^{*} $. In english it essentialy means that the language created from it
     has a general form of a-b-c and this form can repeat with repeating letters such as
     aaa-bbb-cc-aa-bb-cc.
 
@@ -71,8 +71,6 @@
         \centering
         \includegraphics[scale=.7]{hw1_2.eps}
     \end{figure}
-
-
 
     \end{document}
     

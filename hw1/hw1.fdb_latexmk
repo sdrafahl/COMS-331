@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1504239602 "/home/shane/code/COMS-331/hw1/hw1.tex" "hw1.pdf" "hw1" 1504239602
+["pdflatex"] 1504249351 "/home/shane/code/COMS-331/hw1/hw1.tex" "hw1.pdf" "hw1" 1504249351
   "/etc/texmf/web2c/texmf.cnf" 1504055715 1101 af7716885e081ab43982cab7b4672c1a ""
-  "/home/shane/code/COMS-331/hw1/hw1.tex" 1504239602 2546 110863e7af039188834b42a58a536871 ""
+  "/home/shane/code/COMS-331/hw1/hw1.tex" 1504249351 2610 657d984c9c35f705072ead7cf697167e ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1136768653 1528 abec98dbc43e172678c11b3b9031252a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -20,6 +20,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii" 1337017135 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -48,13 +49,13 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1503347518 31075 dbb81bd39d798acf14cc121a151f7fe7 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1504055831 1346346 7f2b8b715a9ddb095afe3697a6ba02b5 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1504055800 3822874 3e701c31761e215abc80c59bec5f5c21 ""
-  "hw1.aux" 1504239602 8 a94a2480d3289e625eea47cd1b285758 ""
-  "hw1.tex" 1504239602 2546 110863e7af039188834b42a58a536871 ""
+  "hw1.aux" 1504249351 8 a94a2480d3289e625eea47cd1b285758 ""
+  "hw1.tex" 1504249351 2610 657d984c9c35f705072ead7cf697167e ""
   "hw1_1-eps-converted-to.pdf" 1504237450 5957 25346554d4befc150c32e40f2e5900e9 ""
   "hw1_1.eps" 1504237129 6655 9c31a571b860620c35096d5d8f408b5d ""
   "hw1_2-eps-converted-to.pdf" 1504239602 4992 ea7fc37cdc8328f9f2ffe6f811e493dc ""
   "hw1_2.eps" 1504239546 5215 66e4a71fe26e2015653073af70490a69 ""
   (generated)
+  "hw1.pdf"
   "hw1.log"
   "hw1.aux"
-  "hw1.pdf"
