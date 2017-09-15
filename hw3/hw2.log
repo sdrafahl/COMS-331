@@ -1,12 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.8.29)  14 SEP 2017 01:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.8.23)  15 SEP 2017 18:04
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/shane/code/COMS-331/hw3/hw2.tex
-(/home/shane/code/COMS-331/hw3/hw2.tex
+**hw2.tex
+(./hw2.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+Babel <3.9h> and hyphenation patterns for 2 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
@@ -145,51 +144,90 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 13.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 16.
+
+
+! LaTeX Error: Environment figure1 undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30     \begin{figure1}
+                        
+? 
 Package epstopdf Info: Source file: <./hw3_1.eps>
-(epstopdf)                    date: 2017-09-14 01:50:42
+(epstopdf)                    date: 2017-09-14 10:37:36
 (epstopdf)                    size: 8625 bytes
 (epstopdf)             Output file: <./hw3_1-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-09-14 01:51:20
+(epstopdf)                    date: 2017-09-14 10:37:36
 (epstopdf)                    size: 5926 bytes
 (epstopdf)             Command: <repstopdf --outfile=./hw3_1-eps-converted-to.p
 df ./hw3_1.eps>
 (epstopdf)             \includegraphics on input line 31.
 Package epstopdf Info: Output file is already uptodate.
- <./hw3_1-eps-converted-to.pdf, id=1, 459.7175pt x 365.365pt>
+<./hw3_1-eps-converted-to.pdf, id=1, 459.7175pt x 365.365pt>
 File: ./hw3_1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./hw3_1-eps-converted-to.pdf>
 Package pdftex.def Info: ./hw3_1-eps-converted-to.pdf used on input line 31.
 (pdftex.def)             Requested size: 321.80005pt x 255.75375pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--34
 
+! LaTeX Error: \begin{document} ended by \end{figure1}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32     \end{figure1}
+                      
+? 
+Package epstopdf Info: Source file: <./hw3_2.eps>
+(epstopdf)                    date: 2017-09-15 15:00:46
+(epstopdf)                    size: 14964 bytes
+(epstopdf)             Output file: <./hw3_2-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-09-15 15:01:21
+(epstopdf)                    size: 7164 bytes
+(epstopdf)             Command: <repstopdf --outfile=./hw3_2-eps-converted-to.p
+df ./hw3_2.eps>
+(epstopdf)             \includegraphics on input line 37.
+Package epstopdf Info: Output file is already uptodate.
+<./hw3_2-eps-converted-to.pdf, id=2, 519.9425pt x 711.65875pt>
+File: ./hw3_2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./hw3_2-eps-converted-to.pdf>
+Package pdftex.def Info: ./hw3_2-eps-converted-to.pdf used on input line 37.
+(pdftex.def)             Requested size: 363.95728pt x 498.15773pt.
+
+Overfull \hbox (3.95728pt too wide) in paragraph at lines 37--38
+[][] 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./hw3_1-eps-converted-
-to.pdf>] (./hw2.aux) ) 
+to.pdf>] [3 <./hw3_2-eps-converted-to.pdf>] (./hw2.aux) ) 
 Here is how much of TeX's memory you used:
- 1494 strings out of 493304
- 21507 string characters out of 6139871
- 79428 words of memory out of 5000000
- 4961 multiletter control sequences out of 15000+600000
+ 1500 strings out of 495028
+ 21576 string characters out of 6181497
+ 75142 words of memory out of 5000000
+ 4718 multiletter control sequences out of 15000+600000
  7591 words of font info for 27 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
- 42i,7n,23p,352b,211s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on hw2.pdf (2 pages, 79638 bytes).
+ 14 hyphenation exceptions out of 8191
+ 42i,7n,23p,322b,215s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
+b>
+Output written on hw2.pdf (3 pages, 84533 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
- 34 compressed objects within 1 object stream
+ 58 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
