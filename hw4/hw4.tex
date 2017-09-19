@@ -1,0 +1,46 @@
+\documentclass[11pt]{article}
+    %	options include 12pt or 11pt or 10pt
+    %	classes include article, report, book, letter, thesis
+    
+    \title{HW4}
+    \author{Shane Drafahl}
+    \date{18 September ,2017}
+    \usepackage{graphicx}
+    \usepackage{epstopdf}
+    \usepackage{graphics}
+
+    \begin{document}
+    \maketitle
+
+    1. Use the pumping lemma to prove that L = $ \{\ ww : w \in \{\ 0,1 \}\ ^{*} \}\ $ is nonregular.
+    $ \newline \newline $
+    We will prove this by proof of contradition and assume that L is a regular language. So therefore 
+    for L, $ \exists_{n} \in N $ such that $ \forall_{x} \in L $, if $ |x| \geq n $, then x can be decomposed
+    into three strings $ \exists_{u, v, w} \in \{\ 0,1 \}\ ^{*} $. Where x = xyz. $ |xy| \leq n, |y| > 0 $ such
+    that $ \forall_{k} \in N, xy^{k}z \in L $.
+    $ \newline \newline $
+    We know that the length of L is $ 2 * |w| $. 
+    We will say the pumping length will be n so the language must
+    be $ w^{n}w^{n} $. We will split $ w_{1}w_{2} $ into $ w_{1}w_{2} = xyz $ where
+    $ xy = w_{1} $ and $ w_{2} = z $. We know that $ y^{i} $ where y is some value $ i > 0 $.
+    If $ xy^{0}z = w^{n - i}w^{n} $. This word should exist in the language L but is a contradiction because 
+    one w is greater than the other. 
+    $ \newline \newline $
+    2. Prove that $ L = \{\ w \in \{\ a,b \}\ ^{*} : |w|_{a} \neq |w|_{b} \}\ $ is not regular.
+    $ \newline \newline  $
+    We will prove this by proof of contradition and assume that L is a regular language. So therefore 
+    for L, $ \exists_{n} \in N $ such that $ \forall_{x} \in L $, if $ |x| \geq n $, then x can be decomposed
+    into three strings $ \exists_{u, v, w} \in \{\ 0,1 \}\ ^{*} $. Where x = xyz. $ |xy| \leq n, |y| > 0 $ such
+    that $ \forall_{k} \in N, xy^{k}z \in L $.
+    $ \newline \newline $
+    We will say that $ w = xy_{'}z $ and that $ y_{'} = a^{i}b^{i} $. i is some natural number greater than
+    0. So we could say $ w = xy_{'}^{1}z = b^{t}a^{f}b^{g}b^{d} $ where f+g = i and $ t + i \leq n $ and
+    $ n \leq t + i + d  $. We can also assume that $ w = xyz $ where $ y = a^{i} $ and i is some natural number
+    greater than 0. So $ xy^{1}z $ = $ b^{t}a^{i}b^{d} $ where ba = xy, and z = b. $ t + i \leq n $.
+    In both cases k = 1 and both of their lengths are the same and they are part of the language L so therefore
+    by contradiction L is not regular.
+    
+
+
+
+    \end{document}
