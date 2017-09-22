@@ -15,29 +15,28 @@
     1. Use the pumping lemma to prove that L = $ \{\ ww : w \in \{\ 0,1 \}\ ^{*} \}\ $ is nonregular.
     $ \newline \newline $
     We will prove this by proof of contradition and assume that L is a regular language. So therefore 
-    for L, $ \exists_{n} \in N $ such that $ \forall_{x} \in L $, if $ |x| \geq n $, then x can be decomposed
-    into three strings $ \exists_{x, y, z} \in \{\ 0,1 \}\ ^{*} $. Where x = xyz. $ |xy| \leq n, |y| > 0 $ such
-    that $ \forall_{k} \in N, xy^{k}z \in L $.
+    for L, $ \exists_{n} \in N $ such that $ \forall_{x} \in L $, if $ |v| \geq n $, then x can be decomposed
+    into three strings $ \exists_{u, v, w} \in \{\ 0,1 \}\ ^{*} $. Where x = uvw. $ |uv| \leq n, |v| > 0 $ such
+    that $ \forall_{k} \in N, uv^{k}w \in L $.
     $ \newline \newline $
-    We know that the length of L is $ 2 * |w| $. 
-    We will say the pumping length will be n so the language must
-    be $ w^{n}w^{n} $. We will split $ w_{1}w_{2} $ into $ w_{1}w_{2} = xyz $ where
-    $ xy = w_{1} $ and $ w_{2} = z $. We know that $ y^{i} $ where y is some value $ i > 0 $ and it represents elements from $ w_{1} $.
-    If $ xy^{0}z = w^{n - i}w^{n} $. This word should exist in the language L but is a contradiction because 
-    one w is greater than the other. So therefore L is not regular.
+    Because there are two w's we know that $ |ww| = 2a $ where $ a $ are some natural number.
+    Suppose that uvw = $ a^{p}b^{l}a^{p}b^{l} $ where $ p + l = n $, p and l are natural numbers.
+    This implies that $ v = b^{i} $ where some $ i $ is a natural number greater than 0. Suppose that 
+    $ uv^{2}w $ = $ a^{p}b^{l + i}a^{p}b^{l} $. $ |uv^{2}w| $ = $ p + l + i + p + l $ = $ 2(n) + i $. This is 
+    a contradiction because the cardinality is no longer a multiple of 2 and should be in the language but it is not
+    so therefore L is not regular.
     $ \newline \newline $
     2. Prove that $ L = \{\ w \in \{\ a,b \}\ ^{*} : |w|_{a} \neq |w|_{b} \}\ $ is not regular.
     $ \newline \newline  $
-    We will prove this by proof of contradition and assume that L is a regular language. So therefore 
-    for L, $ \exists_{n} \in N $ such that $ \forall_{x} \in L $, if $ |x| \geq n $, then x can be decomposed
-    into three strings $ \exists_{x, y, z} \in \{\ 0,1 \}\ ^{*} $. Where x = xyz. $ |xy| \leq n, |y| > 0 $ such
-    that $ \forall_{k} \in N, xy^{k}z \in L $.
-    $ \newline \newline $
-    Consider $ a^{n}b^{n} $, this say that $  x = a^{i}b^{j} $ for some i,j greater than 0. 
-    Then we will do $ xy^{2}z = a^{i + n}b^{j + n} $. To be valid j and i need to be greater than 0 
-    so either $ a^{1 + n}b^{2 + n} $ or $ a^{2 + n}b^{1 + n} $ are valid but one has a greater number of b's or a's
-    for two strings that 
-
+    Using the closure properties we can take the complement of language L 
+    and take its complement $ L^{'}(M_{1}) $ = $ \Sigma $ \ $ L_{M} $.
+    $ L^{'}(M_{1}) = \{\ w : \{\ a,b \}\ ^{*} |w|_{a} = |w|_{b} \}\ $. 
+    We can then concat $ L^{''}(M_{3}) = L^{'}(M_{1}) * L^{'}(m_{2}) $ where 
+    $ L^{''}(M_{3}) = \{\ ww : \{\ a,b \}\ ^{*} |w|_{a} = |w|_{b} \}\ $.
+    That last part we can use homomorphism where $ a \rightarrow 0 $ and $ b \rightarrow 1 $.
+    To get $ L^{'''}(M_{4}) = \{\ ww : w \in \{\ 0,1 \}\ ^{*} \}\ $ we proved in question 1
+    that $ \{\ ww : w \in \{\ 0,1 \}\ ^{*} \}\ $ is not regular and because we produced a non-regular language
+    from the closure of two regular languages that is a contradiction so therefore L is not a regular language.
 
 
     \end{document}
