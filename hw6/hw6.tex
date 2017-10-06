@@ -14,23 +14,41 @@
 
     1. Define a context-free grammar for the language $ L = \{\ 0^{n} 1^{m} 0^{m} 1^{n} \}\ $
     Where S is the start production
-    $ S \rightarrow 0S1 | 1A0 | \epsilon $
-    $ A \rightarrow 1A0 | \epsilon $
+    G = $ \{\ (S,A), (0, 1), S, P  \}\ $
+    $ \newline $
+    $ P = \{\ $
+    $ \newline $
+    $ S \rightarrow 0S1 | 1A0 | \epsilon $ ,
+    $ \newline $
+    $ A \rightarrow 1A0 | \epsilon $ ,
+    $ \}\ $
+    $ \newline $
 
     2. Define a context-free grammar for the language $ L = \{\ a^{n}b^{m} : n \leq 3m \}\ $
     Where S is the start production
-    $ S \rightarrow Bb | \epsilon $
-    $ B \rightarrow Cb | \epsilon $
-    $ C \rightarrow Db | \epsilon $
-    $ D \rightarrow Db | aS | \epsilon $
+    G = $ \{\ (S,B,C), (a, b), S, P  \}\ $
+    $ \newline $
+    $ P = \{\ $
+    $ \newline $
+    $ S \rightarrow aB | Sb | b | \epsilon $ ,
+    $ \newline $
+    $ B \rightarrow aC | Bb | b $  ,
+    $ \newline $
+    $ C \rightarrow aSb | Db | b $ ,
+    $ \newline $
+    $ \}\ $
 
     3. The truth value of a logical expression is defined recursively as:
     Where S is the start production
-    $ S \rightarrow (A) = T | (B) = F | \neg(A) = T | \neg(B) = T $
-    
-    $ A \rightarrow T | (A \wedge A ) | (A \vee B) | (A \vee A) | (F \vee A) | \neg(B) $
-    
-    $ B \rightarrow F | (B \wedge A ) | (A \wedge B) | (B \vee B) | (B \wedge B) | \neg(A) $
-
+    G = $ \{\ (S,A), (0, 1), S, P  \}\ $
+    $ \newline $
+    $ P = \{\ $ 
+    $ \newline $
+    $ S \rightarrow A = t | B = f $ , 
+    $ \newline $
+    $ A \rightarrow t | (A \wedge A ) | (A \vee B) | (A \vee A) | (F \vee A) | \neg(B) $ ,
+    $ \newline $
+    $ B \rightarrow f | (B \wedge A ) | (A \wedge B) | (B \vee B) | (B \wedge B) | \neg(A) $ ,
+    $ \}\ $
 
     \end{document}
