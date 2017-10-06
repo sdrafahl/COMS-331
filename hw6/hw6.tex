@@ -34,13 +34,13 @@
     $ \newline $
     $ B \rightarrow aC | Bb | b $  ,
     $ \newline $
-    $ C \rightarrow aSb | Db | b $ ,
+    $ C \rightarrow aSb | Db | b $
     $ \newline $
     $ \}\ $
 
     3. The truth value of a logical expression is defined recursively as:
     Where S is the start production
-    G = $ \{\ (S,A), (0, 1), S, P  \}\ $
+    G = $ \{\ (S,A,B), (t, f, \wedge, \vee, \neg,(,),=), S, P  \}\ $
     $ \newline $
     $ P = \{\ $ 
     $ \newline $
@@ -48,7 +48,7 @@
     $ \newline $
     $ A \rightarrow t | (A \wedge A ) | (A \vee B) | (A \vee A) | (F \vee A) | \neg(B) $ ,
     $ \newline $
-    $ B \rightarrow f | (B \wedge A ) | (A \wedge B) | (B \vee B) | (B \wedge B) | \neg(A) $ ,
+    $ B \rightarrow f | (B \wedge A ) | (A \wedge B) | (B \vee B) | (B \wedge B) | \neg(A) $
     $ \}\ $
 
     \end{document}
