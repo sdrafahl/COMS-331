@@ -13,20 +13,20 @@
     \maketitle
 
     1. Define a context-free grammar for the language $ L = \{\ 0^{n} 1^{m} 0^{m} 1^{n} \}\ $
-    $ \newline \newline $
-    $ P = \{\ S \rightarrow 1S0 | 0A1 | \epsilon , A \rightarrow 0A1 | \epsilon   \}\ $
-    $ \newline $
-    $ G = ({S,A}, {1,0}, S, P) $
-    $ \newline $
+    Where S is the start production
+    $ S \rightarrow 0S1 | 1A0 | \epsilon $
+    $ A \rightarrow 1A0 | \epsilon $
 
     2. Define a context-free grammar for the language $ L = \{\ a^{n}b^{m} : n \leq 3m \}\ $
-    $ \newline \newline $
-    $ \newline \newline $
-    $ P = \{\ S \rightarrow Bb | \epsilon , B \rightarrow Cb | \epsilon , C \rightarrow Db | \epsilon , D \rightarrow Db | aA | \epsilon \}\ $
-    $ \newline $
-    $ G = ({S,B,C,D}, {a,b}, S, P) $
-    $ \newline $
+    Where S is the start production
+    $ S \rightarrow Bb | \epsilon $
+    $ B \rightarrow Cb | \epsilon $
+    $ C \rightarrow Db | \epsilon $
+    $ D \rightarrow Db | aS | \epsilon $
 
+    3. The truth value of a logical expression is defined recursively as:
+
+    
     
 
 
