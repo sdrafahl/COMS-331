@@ -25,9 +25,12 @@
     $ D \rightarrow Db | aS | \epsilon $
 
     3. The truth value of a logical expression is defined recursively as:
-
+    Where S is the start production
+    $ S \rightarrow (A) = T | (B) = F $
     
+    $ A \rightarrow T | (A \wedge A ) | (A \vee B) | (A \vee A) | (F \vee A) | \neg(B) $
     
+    $ B \rightarrow F | (B \wedge A ) | (A \wedge B) | (B \vee B) | (B \wedge B) | \neg(A) $
 
 
     \end{document}
