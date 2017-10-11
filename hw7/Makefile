@@ -1,4 +1,5 @@
 All:
+	epstopdf hw7.eps
 	pdflatex hw7.tex
 	rm hw7.aux
 	rm hw7.log
