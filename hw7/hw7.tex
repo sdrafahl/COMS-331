@@ -40,15 +40,11 @@
 
     $ \newline $
 
-    Structural: Suppose that there are strings A,B and $ A,B \in L $ by the IH and they are all generated from G. Suppose 
-    that they are concatenated AB or BA. All strings have the same number of 1's and 0's so therefore the resulting 
-    string AB or BA would also have have the same number of 1's and 0's so $ AB, BA \in L $. One of the transitions 
-    in the grammar is $ S \rightarrow SS $ so $ S \rightarrow AB $ or $ S \rightarrow BA $ since we know from the IH that
-    $ A,B \in L $ so therefore $ S \rightarrow A,B $. Therefore AB and BA can be created by the grammar G and they are in 
-    the language L. Alternatively there is the transition 1S0 or 0S1. So suppose 1A0 or 0A1. 
-    These transitions would also create stirngs in the language L because A has a equal number
-    of 1's and 0's so adding a 1 and a 0 to either side would maintain that property. 
-    So therefore grammar G produces all strings in language L.
+    Structural: A,B can be created from transitions from S so me must prove fro 1S0, 0S1, and SS. For SS so for
+    AB or BA if we concatenated the strings A and B the 1's and 0's would still be equal because they are equal for A and B.
+    For the transition 0S1 and 1S0 or 0A1 and 1A0. Its assumed by the IH that S is in L and be generated from G so A is in L and
+    is generated from G. If we add a 1 and a 0 the number of 1's and 0's still equal because they do for A and adding a 1 and a 0 is still 
+    equal.
 
     $ \newline $
 
