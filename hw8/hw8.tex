@@ -17,5 +17,35 @@
     \begin{figure}[!htb]
         \includegraphics[scale=.7]{./hw8_1.eps}
     \end{figure}
+
+    $ \newline $
+
+    2.
+
+    $ \newline $
+
+    By contradiction if we assume that this language is context-free. So
+    there would be an m such that any string $ w \in L $, $ |w| \geq m $. 
+    We will choose w = $ b^{m}a^{m+1}b^{m} $. w cannot be decomposed into w = $ uv^{k}xy^{k}z $ where 
+    k is a natural number.
+    $ \newline $
+    case 1: vxy are composed of all a's. If k = 0 then there will be at least one less a meaning that at least the
+    longest run of a's and b's would be equal or the longest run of b's would be longer.
+    $ \newline $
+    case 2: vxy are composed of all b's. If k = 1 then at least there would be one additional b. Meaning  that at least the 
+    longest run of a's and b's would equal otherwise the longest run of b's would be longer.
+    $ \newline $
+    case 3: vxy are compose of a's and b's. vxy cannot be greater than m so either the middle and left 
+    run or the middle and right run can be pumped at most. Also because of the restriction 
+    that v and y cannot be both epsilon we know that we will either pump just b's , just a's or both a's and b's.
+    If we pump just a's or just b's k = 1 for just b's and k = 0 for just a's similar to case 1 and 2. Otherwise if 
+    we pump both a's and b's if k = 0 then there will be one less a or b in either of the runs. This will mean one of the 
+    runs of b's will now be equal or longer than the runs of a's.
+
+    $ \newline $
+
+    3. 
+
+
     
     \end{document}
