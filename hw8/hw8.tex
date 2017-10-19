@@ -15,7 +15,7 @@
     1. $ \newline \newline $
 
     \begin{figure}[!htb]
-        \includegraphics[scale=.7]{./hw8_1.eps}
+        \includegraphics[scale=.6]{./hw8_1.eps}
     \end{figure}
 
     $ \newline $
@@ -44,7 +44,16 @@
 
     $ \newline $
 
-    3. 
+    3. With proof by contradiction we will assume L is context-free. Therefore we can use closure properties 
+    such as reversal to get $ L^{'} = L^{R} $. We will then concatinate $ L^{''} = L L^{'} = a2bb^{R}2a^{R} $.
+    We will then do a pumping lemma on $ L^{''} $. So there would be an m such that any string $ w \in L $, $ |w| \geq m $.
+    we will choose w = $ 1^{m}210^{m}0^{m}121^{m} $. If we split this up with $ uv^{k}xy^{k}z $ where k is a natural number.
+    The only way this can be pumpped to produce a symetric string is if $ v^{k}xy^{k} = 0^{k}0^{k} $ in the middle of the string.
+    If it is pumped anywhere else it will not be symetric meaning it will not be the reversal of one string. We cannot pump in the
+    middle because the 1001 in the middle are the b's or bb. 10 is greater than 1 by 1 in binary. So if we underpump by setting k = 0.
+    and keeping it symetrical so both the b's in the middle are reduced by at least 1 or more. This would mean that either it is not
+    symetric or $ b \leq a $. Therefore $ L^{''} $ is not context free so by contradition $ L^{'} $ or $ L $ would not be
+    context free QED.
 
 
     
