@@ -44,17 +44,33 @@
 
     $ \newline $
 
-    3. With proof by contradiction we will assume L is context-free. Therefore we can use closure properties 
-    such as reversal to get $ L^{'} = L^{R} $. We will then concatinate $ L^{''} = L L^{'} = a2bb^{R}2a^{R} $.
-    We will then do a pumping lemma on $ L^{''} $. So there would be an m such that any string $ w \in L $, $ |w| \geq m $.
-    we will choose w = $ 1^{m}210^{m}0^{m}121^{m} $. If we split this up with $ uv^{k}xy^{k}z $ where k is a natural number.
-    The only way this can be pumpped to produce a symetric string is if $ v^{k}xy^{k} = 0^{k}0^{k} $ in the middle of the string.
-    If it is pumped anywhere else it will not be symetric meaning it will not be the reversal of one string. We cannot pump in the
-    middle because the 1001 in the middle are the b's or bb. 10 is greater than 1 by 1 in binary. So if we underpump by setting k = 0.
-    and keeping it symetrical so both the b's in the middle are reduced by at least 1 or more. This would mean that either it is not
-    symetric or $ b \leq a $. Therefore $ L^{''} $ is not context free so by contradition $ L^{'} $ or $ L $ would not be
-    context free QED.
+    3. Using proof by contradiction we will assume that the given language is context free. Therefore it can be pumped
+    using pumping lemma. First we will pick a string in the language $ z \in L $. $ z = 1^{m}0^{m+1}21^{m+1}0^{m} $ where 
+    $ z \geq m $ and that z is divided up between uvxyz where $ m \leq | v^{k}xy^{k} |$. There are three cases to this problem.
 
+    $ \newline $
+
+    Case 1: If the left side of the 2 is only pumped and k is greater than 1. In this case because both sides are equal in length the alpha value 
+    will be greater than the beta so it cannot be in the string.
+
+    $ \newline $
+
+    Case 2: If the right side of the 2's is pumped then if we underpumped it a similar senario to case would happen. If we underpump it
+    then alpha will have more bits and will be greater in value.
+
+    $ \newline $
+
+    Case 3: If the uvx split up between both sides of the 2. In this case if v or the y are not equal in the number of bits
+    to each other then this is similar to case 1 and 2. If more bits from alpha are in v then there are bits from beta in y then 
+    you pump it making alpha a larger value. This is symetric if y has a larger cardinality than v. Otherwise if $ |v| = |y| $ then 
+    if we underpump v and y the string goes from $ 1^{m}0^{m+1}21^{m+1}0^{m} $ to $ 1^{m}0^{m}21^{m}0^{m} $. The resulting string 
+    after pumping the alpha will either be equal to or greater than the beta. Therefore by proof of contradiction L is not context free.
+    
+
+    $ \newline $
+    This answer was enspired by 
+    $ \newline $
+    https://cs.stackexchange.com/questions/82637/prove-or-disprove-that-the-following-language-is-context-free
 
     
     \end{document}
