@@ -12,28 +12,14 @@
     \begin{document}
     \maketitle
 
-     1. For union This means that the language accepted by the turring machine 
-     is just a subset of a language that is already accepted. To biuld a turring machine
-     I would just use double sided tape and would take a string from both languages that
-     are unioned and put one on each side of the tape. I would then takes turns with 
-     the algorithm on each perspective language on both sides of the tape. If both sides of the tape
-     are accepted then the language is valid.
+     1. For union for $ L_{1} $ and $ L_{2} $ I have machines $ M_{1} $ and $ M_{2} $. Given 
+     an input $ x \in L_{1} \cup L_{2} $ I give x to $ M_{1} $ and $ M_{2} $ and if its accepted by
+     either machine that means they are accepted. Similar to intersection but both machines must be accepted.
+     I would build this turring machine by getting two tape and with input x and then dove tailing the 
+     two tape into each relative turring machine. For example below is a representation of the tape
+     where $ b_{1} = a_{1} $ and so on and so forth.
 
-     $ \newline $
-        Here is a small example of what the tape could look like. Where $ a_{n} $ is from one language
-        and $ b_{n} $ is from another.
-     $ \newline $
 
-    \begin{figure}[!htb]
-        \includegraphics[scale=.7]{./turring.eps}
-    \end{figure}
-
-    $ \newline $
-
-    For intersection I will still be using two sides of the tape but in this case if either side
-    is accepted then the whole thing is accepted.
-
-    $ \newline $
 
     \begin{figure}[!htb]
         \includegraphics[scale=.7]{./turring.eps}
@@ -42,15 +28,25 @@
     $ \newline $
 
     For reversal I would simply copy the input from one side of the tape to the other in reverse
-    order. I would then have the original accepts either side of the tape we know it is accepting.
+    order. I would then have the same turring machine dove tail both peices of tape and if both are 
+    accepted then the whole thing is accepted.
 
     $ \newline $
 
-    2. Turing-acceptable languages are closed under concatentation. Assuming we have two turring
-    machines that are acceptable we can put a deliminator between two strings from the 
-    two langauges on either side of the deliminator. On the left side of the deliminator
-    we will use one turring machine and after the deliminator we will use the other one.
-    If the left side or the right side is not acceptable the whole thing will not be acceptable.
+    2. Given a string that z = xy and you have $ M_{1} $, $ M_{2} $. You create every possible combination
+    of ways to divided up z onto multiple peices of tape. For example if x = ab and y = cd then
+    you have 
+    $ \newline $
+    $ T[a]_{1} ...  T[bcd]^{2} $ 
+    $ \newline $
+    $ T[ab]_{3} ... T[cd]_{4} $
+    $ \newline $
+    $  T[abc]_{5} ... T[d]_{6} $
+    $ \newline $
+    Where $ T[]_{n} $ is a peice of tape. $ M_{1} $ dove tails for every odd indexed tape and $ M_{2} $
+    does every even. If both of the machines have at least one accepting string then the whole thing is
+    accepted. 
+
 
     $ \newline $
 
@@ -58,26 +54,33 @@
 
     $ \newline $
 
-    For this turring machine $ \Delta (a_{n}, b_{n}) $ = $ (a_{n + 1}, R) $ (GO RIGHT)
+    For this turring machine it would depend on if it goes left,right, or does nothing
     $ \newline $
-    $ \Delta (a_{n}, b_{n}) $ = $ (a_{n + 1}, L) $ (GO LEFT)
+    $ \delta (a_{n}, a_{n}) $ = $ (a_{n + 1}, R) $ and push  (GO RIGHT)
+    $ \newline $
+    $ \delta (a_{n}, a_{n}) $ = $ (a_{n - 1}, L) $ (GO LEFT)
+    $ \newline $
+    $ \delta (a_{n}, a_{n}) $ = $ (a_{n}, a_{n}) $ (Do Nothing)
     $ \newline $
     b. 
     $ \newline $
     
-    This machine M1 accepts pushdown automata's. We can prove this by showing that 
-    $ M(L) \subset M1(L) $ where the pushdown automata is the subset of the given subset.
-    This is true because if we give all languages that are accepted by M to M1 they would be
-    accepted. We know this because the only difference is that M1 has an extra stack. 
-    This argument is symetric of why a DFA is a subset of FA. For turring machines
-    we can show it is equivelant. We can simulate the TM if we put all the contents left of the 
-    head in the first stack and to the right we put all the elements in the right stack. To 
-    go left we pop from the left stack and vice versa with the right stack. Up and down
-    is simulated because we can put multiple dimensions of tape onto the same side of tape
-    by putting in a pattern. For example every odd element could be for the back side of the
-    tape and every even is on the front. In the other direction a turring machine can simply use 
-    two dimensions or two peices of tape to represent each of the stacks and a third tape for
-    the K finite states.
+    To prove that all languages accepted by PA's can be accepted by M we will prove that the accepted
+    languages of $ PA \subset M $. We can prove this because we can simulate a PA with M by starting
+    the head on the left most data on the read only tape and only using $ \Gamma_{1} $ and reading
+    from left to right.  
+
+    $ \newline $
+
+    We can prove that it is equivalant to a turring machine because $ M \subset T $ and $ T \subset M $.
+    In this case we can prove $ M \subset T $ because a Turring machine can use two peices of tape to
+    simulate the two stacks and a third as the read only tape. We can also prove $ T \subset M $.
+    We can simulate a turring machine because we can put all the contents left of the head in $ \Gamma_{1} $.
+    and to the right $ \Gamma_{2} $. If we want to move right we pop $ \Gamma_{2} $ and left $ \Gamma_{1} $.
+    Therfore they are equal. We also know that all languages accepted by any type of PA including
+    NPDA or determinsitic ones can also be accepted by a turring machine so that is another reason 
+    M can accept the same languages as a class of automata.
+
     
 
 
