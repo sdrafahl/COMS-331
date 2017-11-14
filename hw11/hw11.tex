@@ -39,9 +39,8 @@
 
     $ \newline $
 
-    This language is turing-decidable because the languge has a cardinality less than or equal 
-    to ten. The turing machine could simply have a finite number of states to represent every possible
-    string in $ L(M) $ and either print a Y or a N based on those strings.
+    This language is not turing acceptable. The turing machine might go forever to comfirm that there are 10 strings
+    or less in the machine. 
 
     $ \newline $
 
@@ -49,9 +48,8 @@
 
     $ \newline $
 
-    This language is not acceptable because the language is some length greater than 10. 
-    If the turring machine does not halt we do not know if its looping forever or if it has just not
-    reached the end of the language yet. 
+    This language is acceptable because if there is at least 10 words in the language it can be accepted. 
+    This is not decidable because its complement is not turing acceptable.
 
     $ \newline $
 
@@ -86,13 +84,11 @@
     
     $ \newline $
 
-    We know that $ R = \{\ p(M)p(w) : M \searrow w \}\ $ is not decidable so if we can reduce L into 
-    R we can prove that L is not decidable. If we make a machine where all input to a machine is given
-    to $ M_{2} $. $ M_{1} $ is a subset of $ M_{2} $ so any $ x \in L(M_{1}) $ would not halt given to L 
-    because all words in $ L(M_{2}) $ are in $ L(M_{1}) $. This would mean that
-    $ M_{2} \searrow x $. So This machine would have a turring machine that first takes in a input
-    and then if it halts the $ x $ is returned to another turring machine that is given to 
-    $ \{\ p(M_{2})p(x) : M \searrow x \}\ $. This is the same as R via homomorphism so therefore L is 
-    not decidable.
+    We know that it is not turing decidable for a turing machine to determine if two sets are equal. Using reduction 
+    we will take a turing machine $ L $ that checks if two sets are equal. This machine $ L $ needs to check that 
+    $ L(M_{1}) \subseteq L(M_{2}) $ and $ L(M_{2}) \subseteq L(M_{1}) $. We know that $ L $ can be reduced 
+    to $ L(M_{1}) \subseteq L(M_{2}) $ and we know this cannot be decidable. If it could be decidable then 
+    it would mean $ L $ would be decidable and that would be a contradiction. Therefore 
+    $ L = \{\ p(M_{1})p(M_{2}) : L(M_{1}) \subseteq L(M_{2}) \}\ $ is not decidable.
 
     \end{document}
