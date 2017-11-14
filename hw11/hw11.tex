@@ -33,11 +33,69 @@
     because its finite but we cannot read both machines that are deliminated by 0's so it can not be decidable.
 
     $ \newline $
+    
+    2.
+
+    $ \newline $
 
     $ \{\ p(M) : |L(M)| \leq 10 \}\ $
 
     $ \newline $
 
+    This language is turing-decidable because the languge has a cardinality less than or equal 
+    to ten. The turing machine could simply have a finite number of states to represent every possible
+    string in $ L(M) $ and either print a Y or a N based on those strings.
+
+    $ \newline $
+
+    $ \{\ p(M) : |L(M)| \geq 10 \}\ $
+
+    $ \newline $
+
+    This language is not acceptable because the language is some length greater than 10. 
+    If the turring machine does not halt we do not know if its looping forever or if it has just not
+    reached the end of the language yet. 
+
+    $ \newline $
+
+    $ \{\ p(M)p(w) : M \searrow w $ in 10 steps or less $ \}\ $
+
+    $ \newline $
+
+    This is turing decidable because it has a finite number of steps so we know for sure it 
+    halts. If in 10 steps it has not printed a Y then it would print a N by the last step.
+
+    $ \newline $
+
+    $ R = \{\ p(M)p(w) : M \searrow w $ in 10 steps or more $ \}\ $
+
+    $ \newline $
+
+    This language halts so we know it is acceptable. We will use reduction to prove it is not
+    decidable. We know from the class notes that $ \{\ p(M)p(w) : M \searrow w \}\ $. 
+    If we build a machine $ M^{'} $. This machine first takes input $ w $ and checks
+    that it is at least 10 steps. If not it adds more steps to the tape. This tape is then given
+    to $ R $. If $ R $ returns a Y or a N then $ M^{'} $ returns a Y or a N otherwise it loops.
+    So therefore $ R $ reduces to $ \{\ p(M)p(w) : M \searrow w \}\ $ so the language is only 
+    accepting by not decidable.
+
+    $ \newline $
+
+    3. Use reduction to prove that the language is not decidable.
+
+    $ \newline $
+
+    $ L = \{\ p(M_{1})p(M_{2}) : L(M_{1}) \subseteq L(M_{2}) \}\ $
     
+    $ \newline $
+
+    $ L(M_{1}) \subseteq L(M_{2}) $ so therefore $ M_{2} \searrow p(M_{1}) $ because 
+    every word in $ p(M_{1}) $ is also in $ L(M_{2}) $. We know that 
+    $ R = \{\ p(M)p(w) : M \searrow w \}\ $ is not decidable so we need to reduce L into it.
+    $ M_{2} \searrow p(M_{1}) $ So essentialy we just need to take the encoding for 
+    $ M_{2} $ and simulate that turing machine and take $ p(M_{2}) $ as input. We can say
+    this input is $ p(M_{2}) = w $. This is the same as $ \{\ p(M)p(w) : M \searrow w \}\ $
+    where $ p(w) $ is the encoding of $ P(M_{1}) $ and $ P(M) $ is $ p(M_{2}) $ or the turing
+    machine that takes the input. Therefore L reduces down to $ \{\ p(M)p(w) : M \searrow w \}\ $.
 
     \end{document}
