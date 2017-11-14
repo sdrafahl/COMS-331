@@ -16,10 +16,9 @@
     $ \newline $
     $ \footnotesize L = \{\ p(M)p(w):$ M uses a finite number of tape cells when running on input w $ \}\ $
     $ \newline $
-    This language is acceptable because it only has a finite number of tape so even if the input is greater than
-    then memmory storage it can only hold a finite number from the input. This language is not decidable because
-    if M needs to process info from the whole input w, if there are w/2 finite memmory on the tape it can
-    never process the whole tape. 
+    This language is acceptable but not decidable. It is not decidable because the size of the tape is unknown.
+    We can create a turing machine that simply gives M the input w and L and check that it used a finite number of tape
+    cells. Essentialy $ p(M)p(w) $ is the same as the problem $ \{\ P(M)p(w) : M \searrow w \}\ $ which we know is not decidable.
 
     $ \newline $
 
@@ -27,10 +26,8 @@
 
     $ \newline $
     
-    This language is acceptable but not decidable. The turring machine input may not be able to store the
-    entire input. $ p(M)p(w)01^{n}0 $ = $ 01^{m}001^{}0 $ where m is the number of instructions for the head
-    for machine $ M $. We can use $ n $ at most tape cells so we cant get stuck in a infinite for loop
-    because its finite but we cannot read both machines that are deliminated by 0's so it can not be decidable.
+    This language is decidable because we know the number n of tape cells that you can check. If it loops we can check 
+    if the head goes beyond n cells. If it loops over the same cells we can count the number of times it goes over the cells.
 
     $ \newline $
     
