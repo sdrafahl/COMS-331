@@ -1,0 +1,43 @@
+    \documentclass[11pt]{article}
+    %	options include 12pt or 11pt or 10pt
+    %	classes include article, report, book, letter, thesis
+    
+    \title{HW11}
+    \author{Shane Drafahl}
+    \date{16 October ,2017}
+    \usepackage{graphicx}
+    \usepackage{epstopdf}
+    \usepackage{graphics}
+
+    \begin{document}
+    \maketitle
+
+    1. 
+    $ \newline $
+    $ \footnotesize L = \{\ p(M)p(w):$ M uses a finite number of tape cells when running on input w $ \}\ $
+    $ \newline $
+    This language is acceptable because it only has a finite number of tape so even if the input is greater than
+    then memmory storage it can only hold a finite number from the input. This language is not decidable because
+    if M needs to process info from the whole input w, if there are w/2 finite memmory on the tape it can
+    never process the whole tape. 
+
+    $ \newline $
+
+    $ \footnotesize L = \{\ p(M)p(w)01^{n}0:$ M uses at most n tape cells when running on input w $ \}\ $
+
+    $ \newline $
+    
+    This language is acceptable but not decidable. The turring machine input may not be able to store the
+    entire input. $ p(M)p(w)01^{n}0 $ = $ 01^{m}001^{}0 $ where m is the number of instructions for the head
+    for machine $ M $. We can use $ n $ at most tape cells so we cant get stuck in a infinite for loop
+    because its finite but we cannot read both machines that are deliminated by 0's so it can not be decidable.
+
+    $ \newline $
+
+    $ \{\ p(M) : |L(M)| \leq 10 \}\ $
+
+    $ \newline $
+
+    
+
+    \end{document}

@@ -19,11 +19,47 @@
      two tape into each relative turring machine. For example below is a representation of the tape
      where $ b_{1} = a_{1} $ and so on and so forth.
 
+     $ \newline $
 
+     So for union 
 
-    \begin{figure}[!htb]
-        \includegraphics[scale=.7]{./turring.eps}
-    \end{figure}
+     $ \newline $
+
+     \begin{verbatim}
+
+     input x in Sigma*
+     Run M1 on x and then run M2 on x 
+     Accept if M1 or M2 both accept
+
+     \end{verbatim}
+
+      $ \newline $
+
+      intersection
+
+      $ \newline $
+
+     \begin{verbatim}
+
+     input x in Sigma*
+     Run M1 on x and then run M2 on x 
+     Accept if M1 and M2 both accept
+
+     \end{verbatim}
+
+      Reversal
+
+      $ \newline $
+
+     \begin{verbatim}
+
+     input x in Sigma*
+     Assign y:= reverse(x)
+     Run M1 on x and then run M2 on y 
+     Accept if M1 and M2 both accept
+
+     \end{verbatim}
+
 
     $ \newline $
 
@@ -32,6 +68,19 @@
     accepted then the whole thing is accepted.
 
     $ \newline $
+
+    Reversal
+
+      $ \newline $
+
+     \begin{verbatim}
+
+     input x in Sigma*
+     Assign y:= reverse(x)
+     Run M1 on x and then run M2 on y 
+     Accept if M1 and M2 both accept
+
+     \end{verbatim}
 
     2. Given a string that z = xy and you have $ M_{1} $, $ M_{2} $. You create every possible combination
     of ways to divided up z onto multiple peices of tape. For example if x = ab and y = cd then
@@ -49,6 +98,21 @@
 
 
     $ \newline $
+
+    concatination
+
+      $ \newline $
+
+     \begin{verbatim}
+
+     input x in Sigma*
+     Assign t1[], t2[]:= sub(x) // returns every possible sub string of x to arrays of tape for t1 and t2
+     Run M1 for all t1 and run M2 for all t2
+     Accept if M1 and M2 have at least Accept one string each.
+
+     \end{verbatim}
+
+     $ \newline $
 
     3. a 
 
