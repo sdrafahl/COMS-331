@@ -84,11 +84,13 @@
     
     $ \newline $
 
-    We know that it is not turing decidable for a turing machine to determine if two sets are equal. Using reduction 
-    we will take a turing machine $ L $ that checks if two sets are equal. This machine $ L $ needs to check that 
-    $ L(M_{1}) \subseteq L(M_{2}) $ and $ L(M_{2}) \subseteq L(M_{1}) $. We know that $ L $ can be reduced 
-    to $ L(M_{1}) \subseteq L(M_{2}) $ and we know this cannot be decidable. If it could be decidable then 
-    it would mean $ L $ would be decidable and that would be a contradiction. Therefore 
-    $ L = \{\ p(M_{1})p(M_{2}) : L(M_{1}) \subseteq L(M_{2}) \}\ $ is not decidable.
+    Using proof by contradiction we will assume that L is decidable. We know that it is not turing decidable
+    for a turing machine to determine if two sets are equal. We will say that a machine that checks for 
+    set equality is $ R $. Set equality for $ A $ and $ B $ for example would need to check if $ A \subseteq B $
+    and $ B \subseteq A $. Therefore we would know that checking $ L(M_{1}) = L(M_{2}) $ is not decidable. This would
+    mean either checking $ L(M_{1}) \subseteq L(M_{2}) $ or $ L(M_{2}) \subseteq L(M_{1}) $ is undecidable. Our assumption
+    is that $ L(M_{1}) \subseteq L(M_{2}) $ is decidable so we would have to assume that $ L(M_{2}) \subseteq L(M_{1}) $
+    is not decidable but this is a contradiction because if this was not decidable then $ L(M_{1}) \subseteq L(M_{2}) $ 
+    cant be decidable so therefore $ L $ is undecidable.
 
     \end{document}
