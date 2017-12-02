@@ -54,7 +54,7 @@ $ \newline $
 
 $ \newline $
 
-Y
+N
 
 $ \newline $
 
@@ -63,7 +63,7 @@ arithmetic operators, and computes its value.
 
 $ \newline $
 
-T
+Y
 
 $ \newline $
 
@@ -71,7 +71,7 @@ $ \newline $
 
 $ \newline $
 
-N
+Y
 
 $ \newline $
 
@@ -106,7 +106,7 @@ functions, f, and decides whether x calls f when runnning on input w.
 
 $ \newline $
 
-Y
+N
 
 $ \newline $
 
@@ -115,7 +115,7 @@ whether $ x_{1} $ and $ x_{2} $ produce the same output when running on input w.
 
 $ \newline $
 
-Y
+N
 
 $ \newline $
 
@@ -151,6 +151,22 @@ $ n \in N $ such that x uses less than n bytes of memory running on input w.
 
 $ \newline $
 
+N
+
+$ \newline $
+
+2. Use reduction to prove that the language
+
+$ \newline $
+
+Suppose by contradiction that L is decidable. We will reduce the halting problem to L. To reduce we will create a new machine
+that is the same as the halting problem with a machine that takes L. We will assume that machine $ M^{'} $ takes L. If the machine $ M $
+with input $ w $ enters its inital state more than once then if it was given to $ M^{'} $ it would return true. Suppose that
+the machine we are making is $ M^{''} $. We will create $ M^{''} $ with $ M^{'} $. In order to do this $ M^{''} $ will append a transition
+to the initial state to $ w $. In otherwords for all inputs to $ M^{'} $ if it halts it will be true. If $ M^{'} $ does not halt
+it will never return to the initial state and since we assume its decidable it would be false. This is a contradiction because
+this machine $ M^{''} $ is the halting problem because it returns true if it halts and false if it does not. Therefore by reduction L
+is not decidable.
 
 
 
