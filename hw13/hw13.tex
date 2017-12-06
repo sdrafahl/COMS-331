@@ -25,6 +25,44 @@ $ \newline $
 $ \}\ $
 
 $ \newline $
+2. $ L = \{\ p(M)p(w) : M uses a finite number of tape cells when running on input w \}\ $
+$ \newline $
+This is turring acceptable not but turing decidable. It is turring acceptable because
+if it halts it will be a yes. It is not decidable and I will use reduction to prove this.
+I will reduce the halting problem to M that decides L.
+Suppose for contradiction that L is a decidable language for all w. If M
+for L says yes then we know it halts. Othwerwise it does not halt because if it processed
+an infinite number of tape cells then it would never stop and reach the halting state.
+Therefore the halting problem can be reduced to M for L and so therefore
+L is not a decidable language.
+
+$ \newline $
+
+Otherwise another way to prove this is the complement of L is a language where
+M uses an infinite number of tape cells. This is not acceptable because this machine
+can never say yes because it will be infinitely checking tape cells for a yes. Therefore
+becaues the complement is not turring acceptable it cannot be decidable.
+
+$ \newline $
+
+$ L = \{\ p(M)p(w)01^{n}0 : M uses at most n tape cells when running on input w \}\ $
+
+$ \newline $
+
+This language is turring decidable. This language is acceptable because if it uses at most n tape
+cells it can give a Y. To prove its turring decidable we will look at all the cases.
+$ \newline $
+Case 1: $ M \searrow w $ in this case you just have to count the number of states that the head goes through. If it
+uses more than n then M says no and if it uses less or n then M says yes.
+
+$ \newline $
+
+Case 2: $ M \nearrow w $ there are two ways this can happen. It can either run forever over a finite amount of states
+or the head can transition over an infinite set of states. If it transitions over a finite number of states then
+M could count the number of times the head transitions into each state and put a limit on the number of times it can enter the same state
+multiple times. This prevents looping over a finite number of states forever. After it detects looping if it has gone through
+more than n transitions M can say no otherwise it can say yes. If M loops over an infiite number of transition then at some point
+it would reach N an pass it so as soon as it goes over N it can say no. So therefore this machine can always produce a yes or no so it is decidable.
 
 
 
