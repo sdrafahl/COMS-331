@@ -27,14 +27,17 @@ $ \}\ $
 $ \newline $
 2. $ L = \{\ p(M)p(w) : $ M uses a finite number of tape cells when running on input w $ \}\ $
 $ \newline $
-This is turring acceptable not but turing decidable. It is turring acceptable because
-if it halts it will be a yes. It is not decidable and I will use reduction to prove this.
-I will reduce the halting problem to M that decides L.
-Suppose for contradiction that L is a decidable language for all w. If M
-for L says yes then we know it halts. Othwerwise it does not halt because if it processed
-an infinite number of tape cells then it would never stop and reach the halting state.
-Therefore the halting problem can be reduced to M for L and so therefore
-L is not a decidable language.
+This language is turring acceptable. For $ \forall_{w} \in L $ every $ w $ will only take finite number of tape cells
+so we know it will halt when the head of M reaches the last tape cell so $ \forall_{w} \in L $, $ M \searrow w $.
+So therefore L is acceptable. L is not a decidable language. We can prove this by reduction. We
+want to Reduce L to the halting problem. Suppose by contradiction we assume L is decidable.
+This means that there exists a machine M that will say yes to strings in the language. Othwerwise if the string
+is not in the language it will say no. If a string requires an infinte number of cells
+while running on the string then it cannot halt because it cannot process more cells after it halts. So
+if a string x is not in L then it will not halt. Therefore if a string is in L it will halt otherwise it
+will not halt if it is not in L. Our assumption was that there exists a machine that decides L but this is a
+contradiction because that would mean that a machine can decide the halting problem. Therefore L is
+not decidable.
 
 $ \newline $
 
