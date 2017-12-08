@@ -12,13 +12,13 @@
 \begin{document}
 \maketitle
 
-1. $ G = (\{\ G,T,B,A \}\, \{\ 1,0 \}\ ,S,P) $
+1. $ G = (\{\ G,T,B,A,F \}\, \{\ 1,0 \}\ ,S,P) $
 $ \newline $
 $ P = \{\ $
 $ \newline $
 $ S \rightarrow GTB | \epsilon $
 $ \newline $
-$ G \rightarrow GA | GC |\epsilon $
+$ G \rightarrow GA | GC | F $
 $ \newline $
 $ A1 \rightarrow 1A $
 $ \newline $
@@ -36,12 +36,24 @@ $ CB \rightarrow 0A $
 $ \newline $
 $ CT \rightarrow 0TC $
 $ \newline $
+$ FT \rightarrow F $
+$ \newline $
+$ F0 \rightarrow 0F $
+$ \newline $
+$ F1 \rightarrow 1F $
+$ \newline $
+$ FB \rightarrow \epsilon $
+$ \newline $
+
 $ \}\ $
 
 $ \newline $
 2. $ L = \{\ p(M)p(w) : $ M uses a finite number of tape cells when running on input w $ \}\ $
 $ \newline $
+L is turring acceptable. If a machine halts accepts w and reaches the halting state it would have take finite
+tape cells therefore a machine can be created to accept L.
 
+$ \newline $
 To show that L is not decidable. We will use proof by contradiction and assume L is
 a decidable language. Therefore there would exist a Turring Machine $ M_{L} $ that can decide L.
 We can use $ M_{L} $ as a subroutine to construct a decider for the halting problem.
@@ -51,7 +63,29 @@ $ \newline $
 
 $ M_{k} $ : Input $ x \in \Sigma^{*} $
 $ \newline $
-1. If x is not of the form
+1. If x is not of the form $ <M,w> $ else you reject
+$ \newline $
+2. Run $ M_{L} $ on input x
+$ \newline $
+3. Accept iff $ M_{L} $ accepts
+
+$ \newline $
+
+Proof of Correctness:
+
+$ \newline $
+
+$ M(w) halts \leftrightarrow w \in L(M) $
+$ \newline $
+$ \leftrightarrow $ M uses a finite number of tape cells when running on w.
+$ \newline $
+$ \leftrightarrow M_{L} accepts <M, w> $
+$ \leftrightarrow M_{K} accepts x = <M, w> $
+
+$ \newline $
+
+Therefore $ M_{k} $ decides the halting problem. This cannot happen because the halting problem is not decidable.
+Therefore the assumption for the contradiction but be incorrect. So therefore $ M_{L}  \notin TDL $. QED
 
 $ \newline $
 
@@ -67,21 +101,26 @@ $ L = \{\ p(M)p(w)01^{n}0 : $ M uses at most n tape cells when running on input 
 $ \newline $
 
 This language is turring decidable. This language is acceptable because if it uses at most n tape
-cells it can give a Y. To prove its turring decidable we will look at all the cases.
+cells it can accept it. To prove its turring decidable we need to create a machine that can decide it. Suppse we create
+this machine $ M_{L} $.
+
+$ M_{L} $ : Input $ x \in \Sigma^{*} $
 $ \newline $
-Case 1: $ M \searrow w $ in this case you just have to count the number of states that the head goes through. If it
-uses more than n then M says no and if it uses less or n then M says yes.
+1. If x is not of the form $ <M,w> $ else you reject
+$ \newline $
+2. Create an infinite number of tape that are coppies of w
+$ \newline $
+3. Change the all the transitions for M to the next piece of tape for the corresponding location in tape
+$ \newline $
+4. Run $ M_{L} on w $ and count the number of tape cells it uses. Reject if it uses more than n cells.
+$ \newline $
+5. Accept iff there are less than n tape cells marked.
 
 $ \newline $
 
-Case 2: $ M \searrow w $ there are two ways this can happen. It can either run forever over a finite amount of states
-or the head can transition over an infinite set of states. If it transitions over a finite number of states then
-M could count the number of times the head transitions into each state and put a limit on the number of times it can enter the same state
-multiple times. This prevents looping over a finite number of states forever. After it detects looping if it has gone through
-more than n transitions M can say no otherwise it can say yes. If M loops over an infiite number of transition then at some point
-it would reach N an pass it so as soon as it goes over N it can say no. So therefore this machine can always produce a yes or no so it is decidable.
-
-
-
+Everytime $ M_{L} $ moves the head it transitions to a new peice of tape. In otherwords if the head moves back and forth
+the head will transition to an identical peice of tape so whenever it transitions it will use a peice of tape even if it does not halt
+and loops over y tape cells. If this machine does not halt but does not loop over a finite number of cells it will also end up using
+more than n cells as soon as it reaches over n cells. Therefore L is decidable.
 
 \end{document}
