@@ -41,17 +41,17 @@ $ \}\ $
 $ \newline $
 2. $ L = \{\ p(M)p(w) : $ M uses a finite number of tape cells when running on input w $ \}\ $
 $ \newline $
-This language is turring acceptable. For $ \forall_{w} \in L $ every $ w $ will only take finite number of tape cells
-so we know it will halt when the head of M reaches the last tape cell so $ \forall_{w} \in L $, $ M \searrow w $.
-So therefore L is acceptable. L is not a decidable language. We can prove this by reduction. We
-want to Reduce L to the halting problem. Suppose by contradiction we assume L is decidable.
-This means that there exists a machine M that will say yes to strings in the language. Othwerwise if the string
-is not in the language it will say no. If a string requires an infinte number of cells
-while running on the string then it cannot halt because it cannot process more cells after it halts. So
-if a string x is not in L then it will not halt. Therefore if a string is in L it will halt otherwise it
-will not halt if it is not in L. Our assumption was that there exists a machine that decides L but this is a
-contradiction because that would mean that a machine can decide the halting problem. Therefore L is
-not decidable.
+
+To show that L is not decidable. We will use proof by contradiction and assume L is
+a decidable language. Therefore there would exist a Turring Machine $ M_{L} $ that can decide L.
+We can use $ M_{L} $ as a subroutine to construct a decider for the halting problem.
+Suppose we construct $ M_{k} $ that takes $ k $.
+
+$ \newline $
+
+$ M_{k} $ : Input $ x \in \Sigma^{*} $
+$ \newline $
+1. If x is not of the form
 
 $ \newline $
 
@@ -74,7 +74,7 @@ uses more than n then M says no and if it uses less or n then M says yes.
 
 $ \newline $
 
-Case 2: $ M \nearrow w $ there are two ways this can happen. It can either run forever over a finite amount of states
+Case 2: $ M \searrow w $ there are two ways this can happen. It can either run forever over a finite amount of states
 or the head can transition over an infinite set of states. If it transitions over a finite number of states then
 M could count the number of times the head transitions into each state and put a limit on the number of times it can enter the same state
 multiple times. This prevents looping over a finite number of states forever. After it detects looping if it has gone through
